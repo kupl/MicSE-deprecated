@@ -131,6 +131,30 @@ module Ex1 = struct
       NIL T_operation; PAIR;        
     ]
 
+  (* [id tagged code] *)
+  (*
+    0         SEQ [
+      1 ~ 4     DUP; CDR; SWAP; CAR;
+      5         PUSH (SCT_int, d_int 123);
+      6         DIG (inat_int 2);
+      7         DUP;
+      8         DUG (inat_int 3);
+      9 ~ 11    CAR; COMPARE; LE;
+      12        IF(
+      13          SEQ [],
+      14 ~ 15     SEQ [ PUSH (SCT_string, D_String "WrongCondition: self.data.myParameter1 <= 123");
+      16          FAILWITH;]
+                );
+      17 ~ 19   SWAP; DUP; DUG (inat_int 2);
+      20 ~ 22   SWAP; DUP; DUG (inat_int 2);
+      23 ~ 25   SWAP; DUP; DUG (inat_int 2);
+      26 ~ 31   CAR; ADD; SWAP; CDR; SWAP; PAIR;
+      32        DUG (inat_int 2);
+      33 ~ 34   DROP; DROP;
+      35 ~ 36   NIL T_operation; PAIR;        
+    ]
+  *)
+
 end
 
 
