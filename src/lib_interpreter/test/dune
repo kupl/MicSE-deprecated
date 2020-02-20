@@ -1,0 +1,8 @@
+(tests
+  (names
+    demo
+  )
+  (libraries
+    micse_Interpreter
+  )
+)

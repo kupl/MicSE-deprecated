@@ -1,0 +1,10 @@
+(library
+  (name micse_Interpreter)
+  (libraries
+    batteries
+    zarith
+  )
+  (modules_without_implementation
+    pureInst
+  )
+)
