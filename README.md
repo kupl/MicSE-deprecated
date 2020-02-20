@@ -3,6 +3,7 @@ Michelson Symbolic vErifier, for verifying and testing the integrity of smart co
 
 
 ## Dependencies
+The `Dockerfile` describes a docker image which can build and run MicSE. `dockerenv.sh` helps bake and run the docker image.
 * m4
 * libgmp
 * opam 2.0
@@ -10,7 +11,7 @@ Michelson Symbolic vErifier, for verifying and testing the integrity of smart co
   * dune
   * batteries
   * zarith
-The `Dockerfile` describes a docker image which can build and run MicSE. `dockerenv.sh` helps bake and run the docker image.
+
 
 
 ## Roadmap
