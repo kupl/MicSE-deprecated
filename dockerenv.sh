@@ -3,7 +3,7 @@
 # This script run docker environment, and open bash shell for developer.
 # So this script runs docker container with "-it --rm" option, and open bash shell.
 
-DOCKER_IMAGE_NAME="MicSE"
+DOCKER_IMAGE_NAME="micse"
 DOCKER_IMAGE_TAGNAME="test"
 DOCKER_IMAGE=$DOCKER_IMAGE_NAME:$DOCKER_IMAGE_TAGNAME
 DOCKER_RUN_TEMPLATE="docker run -it --rm"   
