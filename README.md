@@ -11,7 +11,14 @@ The `Dockerfile` describes a docker image which can build and run MicSE. `docker
   * dune
   * batteries
   * zarith
+  
 
+## Run Interpreter Demo
+```
+dune clean
+dune exec src/lib_interpreter/test/demo.exe
+```
+The interpreter will simulate a single transaction of the "Welcome Example" Michelson code in [examples.ml](src/lib_interpreter/test/examples.ml), prints the transaction's traces and the stack changes.
 
 
 ## Roadmap
@@ -24,9 +31,3 @@ The `Dockerfile` describes a docker image which can build and run MicSE. `docker
 * Transaction Scenario Generator
 * Integrated Tool
 
-
-## Run Interpreter Demo
-```
-dune clean
-dune exec src/lib_interpreter/test/demo.exe
-```
