@@ -20,6 +20,8 @@ dune exec src/lib_interpreter/test/demo.exe
 ```
 The interpreter will simulate a single transaction of the "Welcome Example" Michelson code in [examples.ml](src/lib_interpreter/test/examples.ml), prints the transaction's traces and the stack changes.
 
+To show every warning, you need to modify `dune` file located at project root. Replace `(flags (:standard -w -A))` into `(flags (:standard -warn-error -A))`.
+
 
 ## Roadmap
 * Interpreter

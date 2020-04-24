@@ -1,0 +1,13 @@
+(executable
+  (name main)
+  (libraries
+    batteries
+    zarith
+    z3
+
+    micse_Interpreter
+  )
+  (modules_without_implementation
+
+  )
+)
