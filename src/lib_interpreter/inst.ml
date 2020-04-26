@@ -118,6 +118,7 @@ module type S = sig
     | ADDRESS
     | CHAIN_ID
     | APPLY
+    | Hidden of int list (* not in Michelson, but used for MicSE inner representation without violate verification result. *)
   and data =
     | D_Int of Z.t
     | D_String of String.t
@@ -262,6 +263,7 @@ module Make (T : TAG) = struct
     | ADDRESS
     | CHAIN_ID
     | APPLY
+    | Hidden of int list (* not in Michelson, but used for MicSE inner representation without violate verification result. *)
   and data =
     | D_Int of Z.t
     | D_String of String.t
@@ -392,6 +394,7 @@ module Make (T : TAG) = struct
     | ADDRESS -> ii 1
     | CHAIN_ID -> ii 0
     | APPLY -> ii 2
+    | Hidden _ -> ii 0
     
 
   (** check validity of EMPTY_SET, EMPTY_MAP, and EMPTY_BIG_MAP *)

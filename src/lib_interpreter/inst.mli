@@ -118,6 +118,7 @@
       | ADDRESS
       | CHAIN_ID
       | APPLY
+      | Hidden of int list (* not in Michelson, but used for MicSE inner representation without violate verification result. *)
     and data =
       | D_Int of Z.t
       | D_String of String.t

@@ -710,6 +710,7 @@ let rec eval_inst : int -> PlainConf.t -> PlainConf.t =
     | ADDRESS
     | CHAIN_ID
     | APPLY
+    | Hidden of int list
     *)
     | _ -> raise (NotEnough_stack pre)
   end
