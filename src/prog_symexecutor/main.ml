@@ -10,6 +10,10 @@ let ifnames : string list ref = ref []
 (* output file names *)
 let ofname  : string ref = ref ""
 
+(* time limits *)
+let ttlimit : float ref = ref 60.0  (* seconds *)
+let z3limit : string ref = ref "5000"   (* milliseconds *)
+
 
 (*****************************************************************************)
 (*****************************************************************************)
@@ -22,6 +26,8 @@ let set_ifnames s = ifnames := !ifnames @ [s]
 
 let cmdParmas = [
   ("-o", Arg.Set_string ofname, "set output filename");
+  ("-time", Arg.Set_float ttlimit, "set total time limit in seconds (float)");
+  ("-z3time", Arg.Set_string z3limit, "set z3 solver time limit in milliseconds (unsigned int)");
 ]
 
 
